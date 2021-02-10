@@ -18,7 +18,11 @@ export const GuestList: React.FC = () => {
         onChange={(e) => setName(e.target.value)}
       />
 
-      {guests}
+      <ul>
+        {guests.map((guest) => (
+          <li key={guest}>{guest}</li>
+        ))}
+      </ul>
 
       <button onClick={onClick}>Add Guest</button>
     </div>
